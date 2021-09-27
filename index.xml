@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>My New Hugo Site</title>
+    <link>http://example.org/</link>
+    <description>Recent content on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    <lastBuildDate>Sat, 25 Sep 2021 23:48:33 +0800</lastBuildDate><atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>環境設定</title>
+      <link>http://example.org/basics/first-content/</link>
+      <pubDate>Sun, 26 Sep 2021 16:59:03 +0800</pubDate>
+      
+      <guid>http://example.org/basics/first-content/</guid>
+      <description>The following steps are here to help you initialize your new website. If you don&amp;rsquo;t know Hugo at all, we strongly suggest you learn more about it by following this great documentation for beginners.
+Create your project Hugo provides a new command to create a new website.
+hugo new site &amp;lt;new_project&amp;gt; Install the theme Install the Relearn theme by following this documentation
+This theme&amp;rsquo;s repository is: https://github.com/McShelby/hugo-theme-relearn.git
+Alternatively, you can download the theme as .</description>
+    </item>
+    
+    <item>
+      <title>My_first_post</title>
+      <link>http://example.org/posts/my_first_post/</link>
+      <pubDate>Sat, 25 Sep 2021 23:36:18 +0800</pubDate>
+      
+      <guid>http://example.org/posts/my_first_post/</guid>
+      <description>新課綱上路兩年多，明年將迎來首批畢業生，學習歷程檔案將取代備審資料，作為升學的重要參考依據。未料卻傳出學生先前上傳的學習歷程檔案不見了，教育部稍早證實確有此事，工程師在移機的過程中不慎「手誤」，初估有118所學校受到影響，其中包含台中女中、武陵高中等學校。教育部表示，目前正請委外廠商全力搶修中，若遺失，也會請學校、學生端看有無備份。
+教育部主任秘書廖興國受訪時表示，由於教育部要將學習歷程檔案資料系統向上集中管理，委外廠商卻在「搬移與備份」的過程中出錯了，移機工程師不慎讓虛擬硬碟被重新設定，目前掌握118學校受影響，因此昨日才緊急發信請學校上網看檔案還在不在，目前還在確認實際影響層面，資料確實有可能遺失。</description>
+    </item>
+    
+  </channel>
+</rss>

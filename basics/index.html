@@ -4,10 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="Hugo 0.88.1" />
-    <meta name="robots" content="noindex, nofollow, noarchive, noimageindex">
+    <link rel="alternate" type="application/rss+xml" href="http://example.org/basics/index.xml" title="My New Hugo Site" />
     <meta name="description" content="">
     <link rel="icon" href="/images/favicon.png" type="image/png">
-    <title> :: My New Hugo Site</title>
+    <title>Basics :: My New Hugo Site</title>
     <link href="/css/nucleus.css?1632652833" rel="stylesheet">
     <link href="/css/fontawesome-all.min.css?1632652833" rel="stylesheet">
     <link href="/css/featherlight.min.css?1632652833" rel="stylesheet">
@@ -23,7 +23,7 @@
       }
     </style>
   </head>
-  <body class="" data-url="/">
+  <body class="" data-url="/basics/">
     <nav id="sidebar" class="">
       <div id="header-wrapper">
         <div id="header">
@@ -76,7 +76,7 @@
       </div>
       <div class="highlightable">
         <ul class="topics">
-          <li data-nav-id="/basics/" title="Basics" class="dd-item"><a href="/basics/"><b>1. </b>Basics</a><ul>
+          <li data-nav-id="/basics/" title="Basics" class="dd-item active parent"><a href="/basics/"><b>1. </b>Basics</a><ul>
           <li data-nav-id="/basics/first-content/" title="環境設定" class="dd-item"><a href="/basics/first-content/">環境設定</a></li>
           <li data-nav-id="/basics/second-content/" title="Second Content" class="dd-item alwaysopen"><a href="/basics/second-content/">Second Content</a><ul></ul></li></ul></li>
           <li data-nav-id="/posts/" title="Posts" class="dd-item"><a href="/posts/">Posts</a><ul>
@@ -90,22 +90,37 @@
     <div id="body">
       <div id="overlay"></div>
       <div class="padding highlightable">
+        <div id="top-bar">
+          <div id="breadcrumbs">
+            <span id="sidebar-toggle-span">
+              <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                <i class="fas fa-bars"></i>
+              </a>
+            </span>
+            <ol class="links" itemscope itemtype="http://schema.org/BreadcrumbList">
+              <meta itemprop="itemListOrder" content="Descending" />
+                <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><meta itemprop="position" content="2" /><a itemprop="item" href="/"><span itemprop="name"></span></a> > </li>
+                <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><meta itemprop="position" content="1" /><a itemprop="item" href="/basics/" aria-disabled="true"><span itemprop="name">Basics</span></a></li>
+            </ol>
+          </div>
+        </div>
         <div id="head-tags">
         </div>
+       <div id="chapter">
         <main id="body-inner">
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fas fa-bars"></i> navigation</a>
-</span>
 
+<h3 id="chapter-1">Chapter 1</h3>
+<h1 id="basics">Basics</h1>
+<p>這是基本環境設定</p>
 
-<h1 id="網頁製作">網頁製作</h1>
-<p>一個例子，一個頁面，一個作業</p>
-
-
+          <footer class=" footline">
+          </footer>
+        </div> 
         </main>
       </div>
       <div id="navigation">
-        <a class="nav nav-next" href="/basics/" title="Basics"><i class="fa fa-chevron-right"></i></a>
+        <a class="nav nav-prev" href="/" title=""><i class="fa fa-chevron-left"></i></a>
+        <a class="nav nav-next" href="/basics/first-content/" title="環境設定"><i class="fa fa-chevron-right"></i></a>
       </div>
     </div>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
