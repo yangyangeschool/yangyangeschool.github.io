@@ -2,7 +2,7 @@
 <html lang="zh-TW">
 <head>
   <meta charset="UTF-8">
-  <title>我的作業首頁</title>
+  <title>學生 GitHub 首頁列表</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -12,27 +12,35 @@
       color: #2c3e50;
     }
     ul {
-      list-style: none;
-      padding-left: 0;
-    }
-    li {
-      margin: 1rem 0;
-    }
-    a {
-      color: #3498db;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
+      line-height: 1.8;
     }
   </style>
 </head>
 <body>
-  <h1>歡迎來到我的作業首頁</h1>
-  <ul>
-    <li><a href="https://yangyangeschool.github.io/w0">W0 作業</a></li>
-    <li><a href="https://yangyangeschool.github.io/w1">W1 作業</a></li>
-    <li><a href="https://www.canva.com/你的學習歷程連結">學習歷程檔案</a></li>
-  </ul>
+  <h1>學生 GitHub 首頁列表</h1>
+  <ul id="studentList"></ul>
+
+  <script>
+    fetch('students.csv')
+      .then(response => response.text())
+      .then(data => {
+        const lines = data.trim().split('\n');
+        const ul = document.getElementById('studentList');
+
+        lines.forEach(line => {
+          const [number, account] = line.split(',');
+          const li = document.createElement('li');
+          const a = document.createElement('a');
+          a.href = `https://${account}.github.io`;
+          a.textContent = `${number} 號：${account}.github.io`;
+          a.target = '_blank'; // 開新分頁
+          li.appendChild(a);
+          ul.appendChild(li);
+        });
+      })
+      .catch(error => {
+        console.error('讀取 CSV 失敗:', error);
+      });
+  </script>
 </body>
 </html>
