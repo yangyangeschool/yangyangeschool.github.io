@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>學生 GitHub 首頁列表</title>
+  <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -13,34 +15,47 @@
     }
     ul {
       line-height: 1.8;
+      list-style: none;
+      padding: 0;
+    }
+    a {
+      color: #3498db;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-  <h1>學生 GitHub 首頁列表</h1>
-  <ul id="studentList"></ul>
+  <h1>113-資處三甲-分流作業</h1>
+  <section>
+  <ul id="studentList" style="columns:3;"></ul>
 
   <script>
     fetch('students.csv')
       .then(response => response.text())
-      .then(data => {
-        const lines = data.trim().split('\n');
+      .then(csvText => {
+        const lines = csvText.trim().split('\n');
+        const header = lines.shift(); // 拿掉表頭
         const ul = document.getElementById('studentList');
 
         lines.forEach(line => {
-          const [number, account] = line.split(',');
+          const [number, name, account] = line.split(',');
           const li = document.createElement('li');
           const a = document.createElement('a');
           a.href = `https://${account}.github.io`;
-          a.textContent = `${number} 號：${account}.github.io`;
+          a.textContent = `${number} ${name}`;
           a.target = '_blank'; // 開新分頁
           li.appendChild(a);
           ul.appendChild(li);
         });
       })
-      .catch(error => {
-        console.error('讀取 CSV 失敗:', error);
+      .catch(err => {
+        document.getElementById('studentList').innerHTML = '<li>讀取 students.csv 失敗</li>';
+        console.error('CSV 載入失敗:', err);
       });
   </script>
+  </section>
 </body>
 </html>
